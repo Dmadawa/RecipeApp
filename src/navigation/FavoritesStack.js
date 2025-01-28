@@ -18,15 +18,15 @@ const FavoritesStack = () => {
           headerTitleStyle: { color: '#333333', fontSize: 18, fontWeight: 'bold' },
         }} 
       />
-      <Stack.Screen 
-        name="RecipeDetail" 
-        component={RecipeDetailScreen} 
+      <Stack.Screen
+        name="RecipeDetail"
+        component={RecipeDetailScreen}
         options={{
           title: 'Recipe Details',
           headerStyle: { backgroundColor: '#f8f9fa' },
           headerTitleStyle: { color: '#333333', fontSize: 18, fontWeight: 'bold' },
           headerTintColor: '#007bff',
-        }} 
+        }}
       />
     </Stack.Navigator>
   );

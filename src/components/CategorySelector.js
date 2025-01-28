@@ -23,7 +23,7 @@ const CategorySelector = ({ categories, selectedCategory, onCategorySelect, cate
     renderItem={({ item, index }) => (
       <StyledTouchableOpacity
         className={`h-10 w-40 mx-1 rounded-lg flex items-center justify-center ${
-          selectedCategory === item.strCategory ? 'bg-red-500' : 'bg-gray-200'
+          selectedCategory === item.strCategory ? 'bg-green-500' : 'bg-gray-200'
         }`}
         onPress={() => onCategorySelect(item.strCategory, index)}
       >
