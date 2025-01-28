@@ -7,12 +7,13 @@ To enable code signing for iOS builds, the following certificates and provisioni
    - **Distribution Certificate**: Required for submitting the app to the App Store.
 
 2. **Provisioning Profiles**:
-   - **Development Profile**: Links the App ID (e.g., `com.example.recipeapp.dev`) with the development certificate.
-   - **Distribution Profile**: Links the App ID (e.g., `com.example.recipeapp.prod`) with the distribution certificate.
+   - **Development Profile**: Links the App ID (e.g., `com.recipeapp.dev`) with the development certificate.
+   - **Distribution Profile**: Links the App ID (e.g., `com.recipeapp`) with the distribution certificate.
 
 3. **App IDs**:
    Unique App IDs need to be created for each environment:
-   - Development: `com.example.recipeapp.dev`
-   - Production: `com.example.recipeapp.prod`
+   - Development: `com.recipeapp.dev`
+   - Production: `com.recipeapp`
+   - Staging: `com.recipeapp.staging`
 
 To set this up, you need access to a paid Apple Developer Account.
