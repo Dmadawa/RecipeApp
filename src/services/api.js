@@ -1,11 +1,13 @@
 import Config from 'react-native-config';
 
+const API_BASE_URL = Config.API_BASE_URL || 'https://www.themealdb.com/api/json/v1/1/';
+
 export const fetchRecipes = async (query, category) => {
   let url = '';
   if (category && !query) {
-    url = `${Config.API_BASE_URL}filter.php?c=${category}`;
+    url = `${API_BASE_URL}filter.php?c=${category}`;
   } else {
-    url = `${Config.API_BASE_URL}search.php?s=${query}`;
+    url = `${API_BASE_URL}search.php?s=${query}`;
   }
   const response = await fetch(url);
   if (!response.ok) {
@@ -15,14 +17,14 @@ export const fetchRecipes = async (query, category) => {
 };
 
 export const fetchRecipeDetails = async (idMeal) => {
-  const url = `${Config.API_BASE_URL}/lookup.php?i=${idMeal}`;
+  const url = `${API_BASE_URL}/lookup.php?i=${idMeal}`;
   const response = await fetch(url);
   const data = await response.json();
   return data.meals[0]; // Return the first (and only) recipe object
 };
 
 export const fetchCategories = async () => {
-  const response = await fetch(`${Config.API_BASE_URL}categories.php`);
+  const response = await fetch(`${API_BASE_URL}categories.php`);
   if (!response.ok) {
     throw new Error('Failed to fetch categories');
   }
