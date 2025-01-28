@@ -1,9 +1,11 @@
 import Config from 'react-native-config';
 
 export const fetchRecipes = async (query, category) => {
-  let url = `${Config.API_BASE_URL}search.php?s=${query}`;
+  let url = '';
   if (category && !query) {
     url = `${Config.API_BASE_URL}filter.php?c=${category}`;
+  } else {
+    url = `${Config.API_BASE_URL}search.php?s=${query}`;
   }
   const response = await fetch(url);
   if (!response.ok) {
