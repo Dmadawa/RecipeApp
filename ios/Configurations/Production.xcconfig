@@ -1,0 +1,10 @@
+//
+//  Production.xcconfig
+//  RecipeApp
+//
+//  Created by Dushan-MAC on 2025-01-28.
+//
+
+API_BASE_URL=https:\/\/www.themealdb.com/api/json/v1/1/
+APP_NAME=RecipeApp
+BUNDLE_IDENTIFIER=com.recipeapp
