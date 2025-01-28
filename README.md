@@ -40,10 +40,10 @@ To enable code signing for Android builds, the following steps are required:
 4. **Environment-Specific Builds**:
    Use the following commands to build for specific environments:
    
-# Development Build
+  Development Build
 ./gradlew assembleReleaseDev
 
-# Production Build
+  Production Build
 ./gradlew assembleRelease
 
 
