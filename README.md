@@ -31,3 +31,19 @@ To enable code signing for Android builds, the following steps are required:
    ```bash
    keytool -genkeypair -v -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -keystore <keystore-name>.jks -alias <key-alias>
 
+2. **Signing Configurations**:
+   Configure android/app/build.gradle to include signing configurations for each environment.
+   
+3. **Secure Keystore Passwords**:
+   Do not hard-code passwords in the project. Instead, use environment variables or secure vaults to manage passwords.
+   
+4. **Environment-Specific Builds**:
+   Use the following commands to build for specific environments:
+   
+# Development Build
+./gradlew assembleReleaseDev
+
+# Production Build
+./gradlew assembleRelease
+
+
