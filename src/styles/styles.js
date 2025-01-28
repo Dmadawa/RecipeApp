@@ -25,5 +25,6 @@ export const notificationnStyles = {
     saveText: 'text-white text-center font-bold',
     saveButton: 'p-3 bg-blue-500 rounded-lg',
     enterTimeTextField: 'p-3 border border-gray-300 rounded-lg bg-white text-gray-800 text-base shadow-m',
-    categoryContainer: 'flex-row flex-wrap mb-2',
+    setReminderTime: 'text-lg text-gray-800 mb-2',
+    container: 'flex-1 p-4 bg-gray-100',
 };
